@@ -17,7 +17,7 @@ according to your preferences.
 
 ## Table of contents
 
-* [2 Spaces for indention](#2-spaces-for-indention)
+* [Tabs leading Spaces otherwise](#tabs-leading-spaces-otherwise)
 * [Newlines](#newlines)
 * [No trailing whitespace](#no-trailing-whitespace)
 * [Use Semicolons](#use-semicolons)
@@ -36,10 +36,15 @@ according to your preferences.
 * [Object.freeze, Object.preventExtensions, Object.seal, with, eval](#objectfreeze-objectpreventextensions-objectseal-with-eval)
 * [Getters and setters](#getters-and-setters)
 
-## 2 Spaces for indention
+## Tabs leading spaces otherwise
 
-Use 2 spaces for indenting your code and swear an oath to never mix tabs and
-spaces - a special kind of hell is awaiting you otherwise.
+Only sociopaths with an intrinsic need to control other peoples text layout
+require leading spaces.  All __leading__ spaces should be tabs.  I don't care
+about your tabstop length because tabs are only allowed at the beginnings of 
+lines, you know, kinda like __what the Tab key was invented for!!__ 
+
+__All__ other space formatting should be done with... spaces!! Finally, swear an oath 
+to never mix tabs and spaces - a special kind of hell is awaiting you otherwise.
 
 ## Newlines
 
