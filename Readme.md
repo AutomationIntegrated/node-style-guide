@@ -10,8 +10,9 @@ either use that and adjust it, or use
 
 This guide was originally created by [Felix Geisendörfer](http://felixge.de/) and is
 licensed under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
-license. You are encouraged to fork this repository and make adjustments
-according to your preferences.
+license.
+
+This version is updated by Bobby Rockers for use within Automation Integrated, LLC.
 
 ![Creative Commons License](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)
 
@@ -27,7 +28,8 @@ according to your preferences.
 * [Method chaining](#method-chaining)
 * [Declare one variable per var statement](#declare-one-variable-per-var-statement)
 * [Use lowerCamelCase for variables, properties and function names](#use-lowercamelcase-for-variables-properties-and-function-names)
-* [Use UpperCamelCase for class names](#use-uppercamelcase-for-class-names)
+* [Use lowerCamelCase for class names](#use-lowercamelcase-for-class-names)
+* [Name files alllowercase. Use of dashes and dots](#Name files alllowercase. Use of dashes and dots)
 * [Use UPPERCASE for Constants](#use-uppercase-for-constants)
 * [Object / Array creation](#object--array-creation)
 * [Use the === operator](#use-the--operator)
@@ -75,7 +77,7 @@ your editor supports that, right?
 
 ## Use single quotes
 
-Use single quotes, unless you are writing JSON.
+Use single quotes is preferred expect when you are writing JSON.
 
 *Right:*
 
@@ -91,12 +93,12 @@ var foo = "bar";
 
 ## Opening braces go on the same line
 
-Your opening braces go on the same line as the statement.
+Your opening braces go on the same line as the statement. Because K&R!
 
 *Right:*
 
 ```js
-if (true) {
+if (true){
 	console.log('winning');
 }
 ```
@@ -110,11 +112,11 @@ if (true)
 }
 ```
 
-Also, notice the use of whitespace before and after the condition statement.
+Also, notice the lack of whitespace after the condition statement.
 
 ## Method chaining
 
-One method per line should be used if you want to chain methods.
+One method per line should be used if you chain more than 2 methods.
 
 You should also indent these methods so it's easier to tell they are part of the same chain.
 
@@ -163,6 +165,8 @@ lines. However, ignore [Crockford][crockfordconvention] when it comes to
 declaring variables deeper inside a function, just put the declarations wherever
 they make sense.
 
+Do *not* add extra spaces after var or try to line up the = signs.
+
 *Right:*
 
 ```js
@@ -183,6 +187,9 @@ var keys = ['foo', 'bar'],
 		values = [23, 42],
 		object = {},
 		key;
+
+var test         = 'this';
+var lotsOfThings = 'here';
 
 while (keys.length) {
 	key = keys.pop();
@@ -210,14 +217,14 @@ var adminUser = db.query('SELECT * FROM users ...');
 var admin_user = db.query('SELECT * FROM users ...');
 ```
 
-## Use UpperCamelCase for class names
+## Use lowerCamelCase for class names
 
-Class names should be capitalized using `UpperCamelCase`.
+Class names should be capitalized using `lowerCamelCase`.
 
 *Right:*
 
 ```js
-function BankAccount() {
+function bankAccount() {
 }
 ```
 
@@ -226,6 +233,28 @@ function BankAccount() {
 ```js
 function bank_Account() {
 }
+
+function BankAccount() {
+}
+```
+## Name files alllowercase. Use of dashes and dots
+
+File names should be all lowercase using dashes to separate words and dots to separate
+logical parts.
+
+*Right:*
+
+```js
+my-new-module-1.0.js
+```
+
+*Wrong:*
+
+```js
+myNewModule-1.0.js
+my_new_module.1-0.js
+my new module.10.js
+My-new-module.1.0.js
 ```
 
 ## Use UPPERCASE for Constants
@@ -313,20 +342,21 @@ if (a == '') {
 
 ## Use multi-line ternary operator
 
-The ternary operator should not be used on a single line. Split it up into multiple lines instead.
+The ternary operator can be used on a single line if very simple. Otherwise, split it 
+up into multiple lines instead.
 
 *Right:*
 
 ```js
-var foo = (a === b)
-	? 1
-	: 2;
+var foo = (a === b) ? 1 : 2;
 ```
 
 *Wrong:*
 
 ```js
-var foo = (a === b) ? 1 : 2;
+var foo = (a === b)
+	? 1
+	: 2;
 ```
 
 ## Do not extend built-in prototypes
