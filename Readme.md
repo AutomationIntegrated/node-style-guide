@@ -29,7 +29,7 @@ This version is updated by Bobby Rockers for use within Automation Integrated, L
 * [Declare one variable per var statement](#declare-one-variable-per-var-statement)
 * [Use lowerCamelCase for variables, properties and function names](#use-lowercamelcase-for-variables-properties-and-function-names)
 * [Use lowerCamelCase for class names](#use-lowercamelcase-for-class-names)
-* [Name files alllowercase. Use of dashes and dots](#Name files alllowercase. Use of dashes and dots)
+* [Name files alllowercase. Use of dashes and dots](#name-files-alllowercase-use-of-dashes-and-dots)
 * [Use UPPERCASE for Constants](#use-uppercase-for-constants)
 * [Object / Array creation](#object--array-creation)
 * [Use the === operator](#use-the--operator)
@@ -77,12 +77,16 @@ your editor supports that, right?
 
 ## Use single quotes
 
-Use single quotes is preferred expect when you are writing JSON.
+Use single quotes is preferred for variable declaration.  Do not use single quotes 
+when you are writing JSON.
+
+For sentences or messages use double quotes as well.
 
 *Right:*
 
 ```js
 var foo = 'bar';
+console.log("Something is happening here");
 ```
 
 *Wrong:*
